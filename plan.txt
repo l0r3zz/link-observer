@@ -1,0 +1,27 @@
+Link Observer Service Plan and schedule
+_______________________________________
+                                                                    TIME:  EST.     ACTUAL
+Research:
+    Reading:
+        * Using Prometheus Libraries in Python                              1.0
+        * Deployment of Prometheus/Graphana locally/in Kubernetes           1.0
+        * Docker/Kubernetes Review                                          2.0
+   Tasks:
+        * Code and debug monitoring service in Python                       1.0
+        * Add Unit Test & Prom monitoring                                   1.0
+        * Deploy Prometheus/Graphana Locally to laptop                      1.0
+        * Debug service get metrics in Prometheus locally                   2.0
+        * Docker-ize the service , deploy locally                           1.0
+        * Screenshots update README                                         0.5
+        * Create Kubernetes Cluster in GCP                                  0.5
+        * Deploy service container to K8 cluster                            1.0
+        * Deploy Prometheus/Graphana containers to K8 cluster               2.0
+        * Verify Metris get to K8 Prometheus/Graphana                       1.0
+        * Take screenshots, update README package repo                      0.5
+        * Declare victory                                                   0.0
+        TOTAL HOURS                                                        15.5
+  Strech:
+        * Code service in golang, debug, Unit Test                          2.0
+        * Code service in Rust, debug, unit Test                            3.0
+
+
