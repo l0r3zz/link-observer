@@ -10,6 +10,6 @@ Some informative links:
 6.  Instrumenting Python with Prometheus (https://www.robustperception.io/instrumenting-python-with-prometheus).
 7.  Prometheus Installation: https://prometheus.io/docs/prometheus/latest/installation/).
 8.  Prometheus metrics / OpenMetrics code instrumentation.;https://sysdig.com/blog/prometheus-metrics/).
-9.  Prometheus (htps://prometheus.io/docs/instrumenting/clientlibs/).
+9.  Prometheus (https://prometheus.io/docs/instrumenting/clientlibs/).
 10. Prometheus Getting Started (https://prometheus.io/docs/prometheus/latest/getting_started/).
 11. Measuring Latency Using Prometheus (https://medium.com/@benpourian/measuring-latency-using-prometheus-d3b3fe1cac57).
