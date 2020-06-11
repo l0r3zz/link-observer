@@ -1,7 +1,13 @@
 # link-observer
 Repo to demonstrate modern DevOps/SRE techniques
 
-Some informative links:
+
+## Screenshots
+
+### Link Observability Dashboard
+<img width="964" alt="Link observability Dashboard" src="https://github.com/l0r3zz/link-observer/blob/master/screenshots/Link%20Observability%20Dashboard%202020-06-11%2011-15-08.png">
+
+## Some informative links:
 1.  How To Install and Configure Prometheus On a Linux Server (https://devopscube.com/install-configure-prometheus-linux/).
 2.  How to set up Prometheus Monitoring on Kubernetes Clusters (https://devopscube.com/setup-prometheus-monitoring-on-kubernetes/).
 3.  Prometheus Python Client Repo (https://github.com/prometheus/client_python).
