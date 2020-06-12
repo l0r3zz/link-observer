@@ -1,7 +1,12 @@
 # link-observer
 Repo to demonstrate modern DevOps/SRE techniques.
-This took a little longer than anticipated. In my normal job, the Prometheus and Graphana infrastructure is prebuilt, and we instrument with **statsd** and not the Prometheus client library directly. This currently runs on my local Ubuntu Linux workstation. The service is containerized, but currently ithe Prometheus and Grafana infrastructure is not, I have a GKE cluster built and have Prometheus deployed but have not finished that part. Considering that I'm overdue, I wanted to submit this MVP and continue working. Once I get all of the infrastructure built out, I will create a golang and rust version of the service.
+This took a little longer than anticipated. In my normal job, the Prometheus and Graphana infrastructure is prebuilt, and we instrument with **statsd** and not the Prometheus client library directly. This currently runs on my local Ubuntu Linux workstation **and now in GKE!!** So you can head over and kick the tires. I deployed all of this manually No helm charts or terraform, I suppose that could be the next step.
 
+**Grafana**: grafana.eecom.io:3000/    admin:helloworld
+
+**Prometheus**: prom.eecom.io:9090
+
+I'm pretty tired right now, so a little shut-eye, will work on the glang service tomorrow.
 Note that you can add additional URLs to the *urls* array and they will be monitored as well
 
 
