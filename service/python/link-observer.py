@@ -9,8 +9,6 @@ urls = ['https://httpstat.us/503','https://httpstat.us/200']
 REQUEST_SUMMARY = Summary('lo_external_url_response_ms', 'Time spent processing request',['url'])
 RESPONSE_GAUGE = Gauge('lo_external_url_up', 'up = 1 all else 0', ['url'])
 
-# Decorate function with metric.
-#@REQUEST_SUMMARY.time()
 def process_request(url):
     with REQUEST_SUMMARY.labels(url).time():
         response = requests.get(url)
