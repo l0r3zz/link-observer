@@ -39,8 +39,3 @@ scrape_configs:
     scrape_interval: 5s
     static_configs:
     - targets: ['localhost:8001']
-      #    metric_relabel_configs:
-      #      - source_labels: [__name__]
-      #        #        regex: (?i)(lo_external_url_response_ms_sum |lo_external_url_response_ms_count |lo_external_url_response_ms_created |lo_external_url_up)
-      #        regex: (lo_external_url_response_ms_sum |lo_external_url_response_ms_count |lo_external_url_response_ms_created |lo_external_url_up)
-      #        action: keep
