@@ -26,4 +26,5 @@ Note that you can add additional URLs to the *urls* array and they will be monit
 10. Prometheus Getting Started (https://prometheus.io/docs/prometheus/latest/getting_started/).
 11. Measuring Latency Using Prometheus (https://medium.com/@benpourian/measuring-latency-using-prometheus-d3b3fe1cac57).
 12. Prometheus Up and Running (https://books.google.com/books/about/Prometheus_Up_and_Running.html?id=mdv2tQEACAAJ).
-13. Monitoring with Prometheus {https://www.prometheusbook.com/).
+13. Monitoring with Prometheus (https://www.prometheusbook.com/).
+14. Dockerize your Python App (https://runnable.com/docker/python/dockerize-your-python-application).
