@@ -34,3 +34,4 @@ Note that you can add additional URLs to the *urls* array and they will be monit
 13. Prometheus Up and Running (https://books.google.com/books/about/Prometheus_Up_and_Running.html?id=mdv2tQEACAAJ).
 14. Monitoring with Prometheus (https://www.prometheusbook.com/).
 15. Dockerize your Python App (https://runnable.com/docker/python/dockerize-your-python-application).
+16. Monitor your applications with Prometheus (https://blog.alexellis.io/prometheus-monitoring/).
