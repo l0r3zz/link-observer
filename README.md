@@ -9,6 +9,14 @@ This took a little longer than anticipated. In my normal job, the Prometheus and
 I'm pretty tired right now, so a little shut-eye, will work on the glang service tomorrow.
 Note that you can add additional URLs to the *urls* array and they will be monitored as well
 
+## Operation
+This is a very simple service. It is assumed that Prometheus and Grafana are already installed. Actually most of the work was installing Prometheus and Grafana, fors locally, then in GKE  To install Prometheus locally, follow the instructions in link **#1**. Get Grafana going locally by following link **#5**. Links **#2** and **#3** Give guidelines for setting this infrastructure up in GKE. The kubernetes manifest for both of these tasks can be found in *link-observer/kube-prometheus* and *link-observer/kube-grafana* respectively. To run prometheus locally, use *configs/prometheus.yaml* 
+
+To run the service locally:
+```bash
+docker run --detach --publish 8001:8001  --name lo l0r3zz/link-observer:latest
+```
+If you have used the provided *prometheus.yaml* to start up your prometheus server, you should see the **link-observer** target appear in th dashboard.
 
 ## Screenshots
 
@@ -35,3 +43,4 @@ Note that you can add additional URLs to the *urls* array and they will be monit
 14. Monitoring with Prometheus (https://www.prometheusbook.com/).
 15. Dockerize your Python App (https://runnable.com/docker/python/dockerize-your-python-application).
 16. Monitor your applications with Prometheus(golang) (https://blog.alexellis.io/prometheus-monitoring/).
+17. Instrumenting a Go service for Prometheus (https://alex.dzyoba.com/blog/go-prometheus-service/).
