@@ -6,8 +6,7 @@ This took a little longer than anticipated. In my normal job, the Prometheus and
 
 **Prometheus**: prom.eecom.io:9090
 
-I'm pretty tired right now, so a little shut-eye, will work on the glang service tomorrow.
-Note that you can add additional URLs to the *urls* array and they will be monitored as well
+There are two versions of the service so far. A Python 3 version in *service/python* and a golang version in *service/golang*
 
 ## Operation
 This is a very simple service. It is assumed that Prometheus and Grafana are already installed. Actually most of the work was installing Prometheus and Grafana, fors locally, then in GKE  To install Prometheus locally, follow the instructions in link **#1**. Get Grafana going locally by following link **#5**. Links **#2** and **#3** Give guidelines for setting this infrastructure up in GKE. The kubernetes manifest for both of these tasks can be found in *link-observer/kube-prometheus* and *link-observer/kube-grafana* respectively. To run prometheus locally, use *configs/prometheus.yaml* 
