@@ -7,7 +7,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"log"
 	"net/http"
-	//	"time"
+	"time"
 )
 
 var (
@@ -25,8 +25,6 @@ var (
 )
 
 func process_request(url string) int {
-	timer := prometheus.NewTimer(REQUEST_SUMMARY.WithLabelValues(url))
-	defer timer.ObserveDuration()
 	resp, _ := http.Get(url)
 	defer resp.Body.Close()
 	return resp.StatusCode
@@ -38,7 +36,8 @@ func probeSites() {
 	prometheus.Register(RESPONSE_GAUGE)
 	go func() {
 		for _, site := range url {
-			//		time.Sleep(1)
+			timer := prometheus.NewTimer(REQUEST_SUMMARY.WithLabelValues(site))
+			time.Sleep(1)
 			response_code = process_request(site)
 			if response_code == 200 {
 				RESPONSE_GAUGE.WithLabelValues(site).Set(1)
@@ -46,6 +45,7 @@ func probeSites() {
 				RESPONSE_GAUGE.WithLabelValues(site).Set(0)
 			}
 
+			defer timer.ObserveDuration()
 		}
 	}()
 }
