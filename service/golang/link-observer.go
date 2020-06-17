@@ -2,7 +2,6 @@ package main
 
 import (
 	"flag"
-	//	"fmt"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"log"
@@ -25,8 +24,10 @@ var (
 )
 
 func process_request(url string) int {
+	timer := prometheus.NewTimer(REQUEST_SUMMARY.WithLabelValues(url))
 	resp, _ := http.Get(url)
 	defer resp.Body.Close()
+	defer timer.ObserveDuration()
 	return resp.StatusCode
 }
 
@@ -35,20 +36,21 @@ func probeSites() {
 	prometheus.Register(REQUEST_SUMMARY)
 	prometheus.Register(RESPONSE_GAUGE)
 	go func() {
-		for _, site := range url {
-			timer := prometheus.NewTimer(REQUEST_SUMMARY.WithLabelValues(site))
-			time.Sleep(1)
-			response_code = process_request(site)
-			if response_code == 200 {
-				RESPONSE_GAUGE.WithLabelValues(site).Set(1)
-			} else {
-				RESPONSE_GAUGE.WithLabelValues(site).Set(0)
-			}
+		for true {
+			for _, site := range url {
+				time.Sleep(1)
+				response_code = process_request(site)
+				if response_code == 200 {
+					RESPONSE_GAUGE.WithLabelValues(site).Set(1)
+				} else {
+					RESPONSE_GAUGE.WithLabelValues(site).Set(0)
+				}
 
-			defer timer.ObserveDuration()
+			}
 		}
 	}()
 }
+
 func main() {
 	flag.Parse()
 	probeSites()
