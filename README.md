@@ -44,3 +44,4 @@ If you have used the provided *prometheus.yaml* to start up your prometheus serv
 16. Monitor your applications with Prometheus(golang) (https://blog.alexellis.io/prometheus-monitoring/).
 17. Instrumenting a Go service for Prometheus (https://alex.dzyoba.com/blog/go-prometheus-service/).
 18. Complete Guide to Create Docker Container for Your Golang Application (https://levelup.gitconnected.com/complete-guide-to-create-docker-container-for-your-golang-application-80f3fb59a15e).
+19. Let's build a Prometheus exporter in Rust (https://dev.to/mindflavor/let-s-build-a-prometheus-exporter-in-rust-30pd).
