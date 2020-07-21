@@ -2,9 +2,6 @@
 Repo to demonstrate modern DevOps/SRE techniques.
 This took a little longer than anticipated. In my normal job, the Prometheus and Graphana infrastructure is prebuilt, and we instrument with **statsd** and not the Prometheus client library directly. This currently runs on my local Ubuntu Linux workstation **and now in GKE!!** So you can head over and kick the tires. I deployed all of this manually No helm charts or terraform, I suppose that could be the next step.
 
-**Grafana**: grafana.eecom.io:3000/    admin:helloworld
-
-**Prometheus**: prom.eecom.io:9090
 
 There are two versions of the service so far. A Python 3 version in *service/python* and a golang version in *service/golang*
 
