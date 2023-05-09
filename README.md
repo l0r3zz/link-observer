@@ -1,12 +1,10 @@
 # link-observer
 Repo to demonstrate modern DevOps/SRE techniques.
-This took a little longer than anticipated. In my normal job, the Prometheus and Graphana infrastructure is prebuilt, and we instrument with **statsd** and not the Prometheus client library directly. This currently runs on my local Ubuntu Linux workstation **and now in GKE!!** So you can head over and kick the tires. I deployed all of this manually No helm charts or terraform, I suppose that could be the next step.
-
 
 There are two versions of the service so far. A Python 3 version in *service/python* and a golang version in *service/golang*
 
 ## Operation
-This is a very simple service. It is assumed that Prometheus and Grafana are already installed. Actually most of the work was installing Prometheus and Grafana, fors locally, then in GKE  To install Prometheus locally, follow the instructions in link **#1**. Get Grafana going locally by following link **#5**. Links **#2** and **#3** Give guidelines for setting this infrastructure up in GKE. The kubernetes manifest for both of these tasks can be found in *link-observer/kube-prometheus* and *link-observer/kube-grafana* respectively. To run prometheus locally, use *configs/prometheus.yaml* 
+This is a very simple service. It is assumed that Prometheus and Grafana are already installed. Actually most of the work was installing Prometheus and Grafana, first locally, then in GKE.  To install Prometheus locally, follow the instructions in link **#1**. Get Grafana going locally by following link **#5**. Links **#2** and **#3** Give guidelines for setting this infrastructure up in GKE. The kubernetes manifest for both of these tasks can be found in *link-observer/kube-prometheus* and *link-observer/kube-grafana* respectively. To run prometheus locally, use *configs/prometheus.yaml* 
 
 To run the service locally:
 ```bash
